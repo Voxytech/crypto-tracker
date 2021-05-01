@@ -1,0 +1,26 @@
+{
+  "name": "crypto-tracker",
+  "version": "1.0.0",
+  "description": "A simple crypto tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Voxytech/crypto-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Voxytech/crypto-tracker/issues"
+  },
+  "homepage": "https://github.com/Voxytech/crypto-tracker#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
