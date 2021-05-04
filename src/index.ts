@@ -8,7 +8,6 @@ const table = document.getElementById("crypto") as any;
 window.addEventListener('load', async () => {
   Object.values(CRYPTOS).forEach(async cryptoName => {
     const crypto = await API.fetchCrypto(cryptoName);
-
     let newRow = table.insertRow(table.length);
 
     let cellImg = newRow.insertCell(0);

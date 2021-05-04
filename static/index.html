@@ -8,48 +8,107 @@
 </head>
 
 <body>
-  <div id="entete">
-    <table id='resume' cellpadding='10px' style="text-align:left;">
-      <thead>
-        <tr>
-          <th>Dépots ($)</th>
-          <th>Répartition</th>
-          <th>Taux de rentabilité (%)</th>
-        </tr>
-      </thead>
-    </table>
 
-    <table id='capital' cellpadding='10px' style="text-align:left;">
-      <thead>
-        <tr>
-          <th>Capital réel ($)</th>
-          <th>Gain réels ($)</th>
-        </tr>
-      </thead>
-    </table>
-    
-  </div>
+  <input type="checkbox" id="toggle_nightAndDay" class="toggle rememberState" hidden aria-hidden="true">
 
-  <div id='content'>
-    <table id='crypto' cellpadding='10px' style="text-align:left;">
-      <thead>
-        <tr>
-          <th>Logo</th>
-          <th>ID</th>
-          <th>Prix usd</th>
-          <th>ATH</th>
-          <th>Changement 24h (%)</th>
-          <th>Rang</th>
-          <th>Quantité</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
+  <div id="fauxBody">
+    <div id="fauxInner">
+
+      <header id="top">
+        <h1>Crypto tracker</h1>
+        <div id="mainMenu">
+          <a href="#" class="modalClose" hidden aria-hidden="true"></a>
+          <div>
+            <nav>
+              <a href="#" class="modalClose" hidden aria-hidden="true"></a>
+              <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#submenu">Ajouter une crypto</a></li>
+                <li><a href="#login">Connexion</a></li>
+                <li class="nightAndDay" hidden aria-hidden="true">
+                  <label for="toggle_nightAndDay"></label>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- #mainMenu -->
+        </div>
+        <a href="#mainMenu" class="mainMenuOpen" hidden aria-hidden="true"></a>
+      </header>
+
+      <main>
+
+        <div id="entete">
+          <table id='resume' style="text-align:left;">
+            <thead>
+              <tr>
+                <th>Dépots ($)</th>
+                <th>Répartition</th>
+                <th>Taux de rentabilité (%)</th>
+              </tr>
+            </thead>
+          </table>
+
+          <table id='capital' style="text-align:left;">
+            <thead>
+              <tr>
+                <th>Capital réel ($)</th>
+                <th>Gain réels ($)</th>
+              </tr>
+            </thead>
+          </table>
+
+        </div>
+
+        <div id='content'>
+          <table id='crypto' style="text-align:left;">
+            <thead>
+              <tr>
+                <th>Logo</th>
+                <th>ID</th>
+                <th>Prix usd</th>
+                <th>ATH</th>
+                <th>Changement 24h (%)</th>
+                <th>Rang</th>
+                <th>Quantité</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
 
 
-      </tbody>
-    </table>
-  </div>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <form id="login" action="#" method="post" class="modal">
+          <a href="#" class="modalClose" hidden aria-hidden="true"></a>
+          <div>
+            <section>
+              <a href="#" class="modalClose" hidden aria-hidden="true"></a>
+              <h2>Connexion</h2>
+              <div>
+                <fieldset>
+                  <label>
+                    Nom d'utilisateur :<br>
+                    <input type="text" name="name" required><br>
+                  </label><label>
+                    Mot de passe :<br>
+                    <input type="password" name="pass" required><br>
+                  </label>
+                </fieldset>
+                <div class="submitsAndHiddens">
+                  <button>Se connecter</button>
+                  <!-- .submitsAndHiddens -->
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- #login.modal -->
+        </form>
+      </main>
 
 </body>
 
