@@ -44,6 +44,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
