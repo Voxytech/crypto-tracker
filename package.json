@@ -18,7 +18,15 @@
   },
   "homepage": "https://github.com/Voxytech/crypto-tracker#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "*",
+    "css-loader": "^5.2.4",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"

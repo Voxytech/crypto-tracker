@@ -1,8 +1,9 @@
+import "./index.scss";
 
 let index = ["raydium", "solana", "oxygen", "vechain", "eos", "ethereum", "chiliz", "serum", "uniswap", "binancecoin", "filecoin", "curve-dao-token", "band-protocol", "litecoin", "chainlink", "stellar", "concierge-io", "ripple"]
 var request = new XMLHttpRequest();
 
-table = document.getElementById("crypto");
+var table = document.getElementById("crypto") as any;
 
 (function loop(i, length) {
   if (i >= length) {
@@ -43,7 +44,7 @@ table = document.getElementById("crypto");
       input.setAttribute("id", "name");
       input.setAttribute("name", "name");
       cellQte.appendChild(input);
-      cellQte.addEventListener("change", () => { cellTotal.textContent = (input.value * data.market_data.current_price.usd).toFixed(3) });
+      cellQte.addEventListener("change", () => { cellTotal.textContent = ((input.value as any) * data.market_data.current_price.usd).toFixed(3) });
 
       var cellTotal = newRow.insertCell(7);
       cellTotal.textContent = "0";
