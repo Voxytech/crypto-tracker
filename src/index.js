@@ -26,15 +26,18 @@ table = document.getElementById("crypto");
       cellName.textContent = data.localization.en;
 
       var cellPriceUSD = newRow.insertCell(2);
-      cellPriceUSD.textContent = data.market_data.current_price.usd;
+      cellPriceUSD.textContent = (data.market_data.current_price.usd).toFixed(5);
 
       var cellATH = newRow.insertCell(3);
-      cellATH.textContent = data.market_data.ath.usd;
+      cellATH.textContent = (data.market_data.ath.usd).toFixed(5);
 
-      var cellRank = newRow.insertCell(4);
+      var cellChg24h = newRow.insertCell(4);
+      cellChg24h.textContent = (data.market_data.price_change_24h_in_currency.usd).toFixed(1);
+
+      var cellRank = newRow.insertCell(5);
       cellRank.textContent = data.coingecko_rank;
 
-      var cellQte = newRow.insertCell(5);
+      var cellQte = newRow.insertCell(6);
       const input = document.createElement("input");
       input.setAttribute("type", "number");
       input.setAttribute("id", "name");
@@ -42,7 +45,7 @@ table = document.getElementById("crypto");
       cellQte.appendChild(input);
       cellQte.addEventListener("change", () => { cellTotal.textContent = (input.value * data.market_data.current_price.usd).toFixed(3) });
 
-      var cellTotal = newRow.insertCell(6);
+      var cellTotal = newRow.insertCell(7);
       cellTotal.textContent = "0";
 
       loop(i + 1, length);
