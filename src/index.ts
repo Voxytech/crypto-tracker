@@ -21,7 +21,13 @@ window.addEventListener('load', async () => {
     cellName.textContent = crypto.localization.en;
 
     let cellPriceUSD = newRow.insertCell(2);
-    cellPriceUSD.textContent = (crypto.market_data.current_price.usd).toFixed(5);
+    if(crypto.market_data.current_price.usd < 1){
+      cellPriceUSD.textContent = (crypto.market_data.current_price.usd).toFixed(5);
+    }
+    else{
+      cellPriceUSD.textContent = (crypto.market_data.current_price.usd).toFixed(3);
+    }
+    
 
     let cellATH = newRow.insertCell(3);
     cellATH.textContent = (crypto.market_data.ath.usd).toFixed(5);
@@ -38,11 +44,11 @@ window.addEventListener('load', async () => {
     input.setAttribute("id", "name");
     input.setAttribute("name", "name");
     cellQte.appendChild(input);
-    cellQte.addEventListener("change", () => { 
-      cellTotal.textContent = ((input.value as any) * crypto.market_data.current_price.usd).toFixed(3) 
+    cellQte.addEventListener("change", () => {
+      cellTotal.textContent = ((input.value as any) * crypto.market_data.current_price.usd).toFixed(3) + " $"
     });
 
     let cellTotal = newRow.insertCell(7);
-    cellTotal.textContent = "0";
+    cellTotal.textContent = "0 $";
   })
 });

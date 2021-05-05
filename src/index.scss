@@ -1,489 +1,510 @@
 /* null margins and padding to give good cross-browser baseline */
-html,body,address,blockquote,div,
-form,fieldset,caption,
-h1,h2,h3,h4,h5,h6,
-hr,ul,li,ol,ul,dl,dt,dd,
-table,tr,td,th,p,img {
-	margin:0;
-	padding:0;
+html,
+body,
+address,
+blockquote,
+div,
+form,
+fieldset,
+caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ul,
+li,
+ol,
+ul,
+dl,
+dt,
+dd,
+table,
+tr,
+td,
+th,
+p,
+img {
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  --hue: 220;
 
-	--hue:220;
-	
-	--body-background:hsl(var(--hue), 100%, 95%);
-	--body-color:hsl(var(--hue), 100%, 10%);
-	
-	--header-background:hsl(var(--hue), 100%, 90%);
-	--header-border-color:#0007;
-	
-	--footer-background:var(--header-background);
-	--footer-border-color:var(--header-border-color);
-	--footer-a-color:hsla(var(--hue), 100%,  15%, 0.8);
-	--footer-a-hover-color:#000E;
-	
-	--mainMenu-a-color:hsl(var(--hue), 100%,  15%);
-	--mainMenu-a-hover-color:#000;
-	
-	--input-background:#FFFA;
-	--input-border-color:#0006;
-	--button-background:hsla(var(--hue), 100%, 15%, 0.07);
-	--button-color:#000;
-	--button-hover-background:hsla(var(--hue), 100%, 15%, 0.2);
-	
-	--main-a-color:hsl(var(--hue), 100%, 50%);
-	--main-a-visited-color:hsl(var(--hue), 50%, 50%);
-	--main-a-hover-color:hsl(var(--hue), 100%, 20%);
-	
-	--modal-radial-color-inner:hsla(var(--hue), 100%, 100%, 0.8);
-	--modal-radial-color-outer:hsla(var(--hue), 100%, 85%, 0.95);
-	
-	--modal-section-background:hsl(var(--hue), 100%, 95%);
-	--modal-section-border-color:hsla(var(--hue), 100%, 25%, 0.25);
-	--modal-section-box-shadow-color:#0006;
-	
-	--modal-close-color:#000;
-	
-	--modal-h2-background:hsla(var(--hue), 100%, 25%, 0.15);
-	--modal-h2-border-color:var(--modal-section-border-color);
-	
-	--modalMenu-a-background:hsla(var(--hue), 100%, 25%, 0.15);
-	--modalMenu-a-hover-background:hsla(var(--hue), 100%, 25%, 0.25);
-	--modalMenu-a-border-color:#0006;
-	--modalMenu-a-color:#000;
-	
-	--mainMenuOpen-color:#000A;
-	
+  --body-background: hsl(var(--hue), 100%, 95%);
+  --body-color: hsl(var(--hue), 100%, 10%);
+
+  --header-background: hsl(var(--hue), 100%, 90%);
+  --header-border-color: #f5f5f5;
+
+  --footer-background: var(--header-background);
+  --footer-border-color: var(--header-border-color);
+  --footer-a-color: hsla(var(--hue), 100%, 15%, 0.8);
+  --footer-a-hover-color: #000e;
+
+  --mainMenu-a-color: hsl(var(--hue), 100%, 15%);
+  --mainMenu-a-hover-color: #000;
+
+  --input-background: #fffa;
+  --input-border-color: #0006;
+  --button-background: hsla(var(--hue), 100%, 15%, 0.07);
+  --button-color: #000;
+  --button-hover-background: hsla(var(--hue), 100%, 15%, 0.2);
+
+  --main-a-color: hsl(var(--hue), 100%, 50%);
+  --main-a-visited-color: hsl(var(--hue), 50%, 50%);
+  --main-a-hover-color: hsl(var(--hue), 100%, 20%);
+
+  --modal-radial-color-inner: hsla(var(--hue), 100%, 100%, 0.8);
+  --modal-radial-color-outer: hsla(var(--hue), 100%, 85%, 0.95);
+
+  --modal-section-background: hsl(var(--hue), 100%, 95%);
+  --modal-section-border-color: hsla(var(--hue), 100%, 25%, 0.25);
+  --modal-section-box-shadow-color: #0006;
+
+  --modal-close-color: #000;
+
+  --modal-h2-background: hsla(var(--hue), 100%, 25%, 0.15);
+  --modal-h2-border-color: var(--modal-section-border-color);
+
+  --modalMenu-a-background: hsla(var(--hue), 100%, 25%, 0.15);
+  --modalMenu-a-hover-background: hsla(var(--hue), 100%, 25%, 0.25);
+  --modalMenu-a-border-color: #0006;
+  --modalMenu-a-color: #000;
+
+  --mainMenuOpen-color: #000a;
 }
 
 #toggle_nightAndDay:checked ~ * {
+  --hue: 240;
 
-	--hue:240;
-	
-	--body-background:hsl(var(--hue), 100%, 5%);
-	--body-color:hsl(var(--hue), 100%, 90%);
-	
-	--header-background:hsl(var(--hue), 100%, 20%);
-	--header-border-color:#FFF4;
-	
-	--footer-background:var(--header-background);
-	--footer-border-color:var(--header-border-color);
-	--footer-a-color:hsla(var(--hue), 100%,  90%, 0.8);
-	--footer-a-hover-color:#FFFE;
-	
-	--mainMenu-a-color:hsl(var(--hue), 100%,  85%);
-	--mainMenu-a-hover-color:#FFF;
-	
-	--input-background:#FFFA;
-	--input-border-color:#0006;
-	--button-background:hsla(var(--hue), 100%, 70%, 0.3);
-	--button-hover-background:hsla(var(--hue), 100%, 70%, 0.5);
-	--button-color:#FFF;
-	
-	--main-a-color:hsl(var(--hue), 100%, 80%);
-	--main-a-visited-color:hsl(var(--hue), 50%, 80%);
-	--main-a-hover-color:hsl(var(--hue), 100%, 90%);
-	
-	--modal-radial-color-inner:hsla(var(--hue), 100%, 5%, 0.8);
-	--modal-radial-color-outer:hsla(var(--hue), 100%, 15%, 0.95);
-	
-	--modal-section-background:hsl(var(--hue), 80%, 15%);
-	--modal-section-border-color:hsla(var(--hue), 100%, 75%, 0.25);
-	--modal-section-box-shadow-color:#0006;
-	
-	--modal-close-color:#FFF;
-	
-	--modal-h2-background:hsla(var(--hue), 100%, 80%, 0.2);
-	--modal-h2-border-color:var(--modal-section-border-color);
-	
-	--modalMenu-a-background:hsla(var(--hue), 100%, 75%, 0.1);
-	--modalMenu-a-hover-background:hsla(var(--hue), 100%, 50%, 0.3);
-	--modalMenu-a-border-color:#0006;
-	--modalMenu-a-color:hsla(var(--hue), 100%, 75%);
-	
-	--mainMenuOpen-color:#FFFA;
+  --body-background: hsl(var(--hue), 100%, 5%);
+  --body-color: hsl(var(--hue), 100%, 90%);
 
+  --header-background: hsl(var(--hue), 100%, 20%);
+  --header-border-color: #fff4;
+
+  --footer-background: var(--header-background);
+  --footer-border-color: var(--header-border-color);
+  --footer-a-color: hsla(var(--hue), 100%, 90%, 0.8);
+  --footer-a-hover-color: #fffe;
+
+  --mainMenu-a-color: hsl(var(--hue), 100%, 85%);
+  --mainMenu-a-hover-color: #fff;
+
+  --input-background: #fffa;
+  --input-border-color: #0006;
+  --button-background: hsla(var(--hue), 100%, 70%, 0.3);
+  --button-hover-background: hsla(var(--hue), 100%, 70%, 0.5);
+  --button-color: #fff;
+
+  --main-a-color: hsl(var(--hue), 100%, 80%);
+  --main-a-visited-color: hsl(var(--hue), 50%, 80%);
+  --main-a-hover-color: hsl(var(--hue), 100%, 90%);
+
+  --modal-radial-color-inner: hsla(var(--hue), 100%, 5%, 0.8);
+  --modal-radial-color-outer: hsla(var(--hue), 100%, 15%, 0.95);
+
+  --modal-section-background: hsl(var(--hue), 80%, 15%);
+  --modal-section-border-color: hsla(var(--hue), 100%, 75%, 0.25);
+  --modal-section-box-shadow-color: #0006;
+
+  --modal-close-color: #fff;
+
+  --modal-h2-background: hsla(var(--hue), 100%, 80%, 0.2);
+  --modal-h2-border-color: var(--modal-section-border-color);
+
+  --modalMenu-a-background: hsla(var(--hue), 100%, 75%, 0.1);
+  --modalMenu-a-hover-background: hsla(var(--hue), 100%, 50%, 0.3);
+  --modalMenu-a-border-color: #0006;
+  --modalMenu-a-color: hsla(var(--hue), 100%, 75%);
+
+  --mainMenuOpen-color: #fffa;
 }
-
-img, fieldset {
-	border:none;
+è img,
+fieldset {
+  border: none;
 }
 
 *,
 *:after,
 *:before {
-	box-sizing:border-box;
-	//transition:all 0.3s;
+  box-sizing: border-box;
+  //transition:all 0.3s;
 }
 
 hr {
-	display:none;
-	/*
+  display: none;
+  /*
 		HR in my code are for semantic breaks in topic/section, NOT
 		style/presenation, so hide them from screen.css users
 	*/
 }
 
-@media (max-width:480px) {
-	/* Fix for pre "viewport <meta>" mobile browsers */
-	* {
-		-webkit-text-size-adjust:none;
-		-ms-text-size-adjust:none;
-	}
+@media (max-width: 480px) {
+  /* Fix for pre "viewport <meta>" mobile browsers */
+  * {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+  }
 }
 
-html, body {
-	height:100%;
+html,
+body {
+  height: 100%;
 }
 
-body, button, input, table, textarea, select {
-	font:normal 1em/1.5 arial,helvetica,sans-serif;
+body,
+button,
+input,
+table,
+textarea,
+select {
+  font: normal 1em/1.5 arial, helvetica, sans-serif;
 }
 
-pre, code, var, samp, kbd {
-	font-size:1em;
-	font-family:consolas,monospace;
+pre,
+code,
+var,
+samp,
+kbd {
+  font-size: 1em;
+  font-family: consolas, monospace;
 }
 
 .modal,
 #fauxInner {
-	background:var(--body-background);
-	color:var(--body-color);
+  background: var(--body-background);
+  color: var(--body-color);
 }
 
 #fauxInner {
-	display:flex;
-	flex-direction:column;
-	min-height:100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-#fauxInner > header, 
+#fauxInner > header,
 #fauxInner > footer {
-	flex:0 0 auto;
-	display:flex;
-	flex-wrap:wrap;
-	padding:1em;
-	border-style:solid;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  border-style: solid;
 }
 
 #fauxInner > header {
-	align-items:center;
-	background:var(--header-background);
-	border-color:var(--header-border-color);
-	border-width:0 0 1px;
+  align-items: center;
+  background: var(--header-background);
+  border-color: var(--header-border-color);
+  border-width: 0 0 1px;
 }
 
 #fauxInner > footer {
-	align-items:start;
-	background:var(--footer-background);
-	border-color:var(--footer-border-color);
-	border-width:1px 0 0;
+  align-items: start;
+  background: var(--footer-background);
+  border-color: var(--footer-border-color);
+  border-width: 1px 0 0;
 }
 
 #fauxInner > header > section,
 #fauxInner > footer > section {
-	flex:1 0 auto;
+  flex: 1 0 auto;
 }
 
 #fauxInner > footer section:last-child {
-	text-align:right;
+  text-align: right;
 }
 
 #fauxInner > footer h2 {
-	font-size:1.25em;
+  font-size: 1.25em;
 }
 
 h1 {
-	flex:1 0 auto;
-	font-size:1.5em;
+  flex: 1 0 auto;
+  font-size: 1.5em;
 }
 
 main {
-	flex:1 0 auto;
-	max-width:48em;
-	margin:0 auto;
-	padding:1.5em;
+  flex: 1 0 auto;
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 1.5em;
 }
 
 main a {
-	color:var(--main-a-color);
+  color: var(--main-a-color);
 }
 
 main a:visited {
-	color:var(--main-a-visited-color);
+  color: var(--main-a-visited-color);
 }
 
 main a:focus,
 main a:hover {
-	color:var(--main-a-focus-color);
+  color: var(--main-a-focus-color);
 }
 
 main h2 {
-	font-size:1.5em;
-	line-height:1.2em;
-	margin-bottom:0.33em;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 0.33em;
 }
 
 main p,
 .modal p {
-	padding-bottom:1.5em;
+  padding-bottom: 1.5em;
 }
 
 #mainMenu {
-	flex:0 0 auto;
+  flex: 0 0 auto;
 }
 
 #mainMenu ul {
-	display:flex;
-	align-items:center;
-	justify-content:end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 #mainMenu li {
-	list-style:none;
-	margin-left:1.5em;
+  list-style: none;
+  margin-left: 1.5em;
 }
 
 #mainMenu li label,
 #mainMenu li a {
-	display:inline-block;
-	padding:0.25em 0;
-	text-decoration:none;
-	color:var(--mainMenu-a-color);
+  display: inline-block;
+  padding: 0.25em 0;
+  text-decoration: none;
+  color: var(--mainMenu-a-color);
 }
 
 #mainMenu li a:focus,
 #mainMenu li a:hover,
 #mainMenu li label:focus,
 #mainMenu li label:hover {
-	color:var(--mainMenu-a-hover-color);
-	transform:scale(1.2);
+  color: var(--mainMenu-a-hover-color);
+  transform: scale(1.2);
 }
 
 #mainMenu .nightAndDay {
-	display:block; /* undo "hidden" attribute for screen media */
+  display: block; /* undo "hidden" attribute for screen media */
 }
 
 #mainMenu .nightAndDay label:before {
-	content:"Day Mode";
+  content: "Day Mode";
 }
 
 #toggle_nightAndDay:checked ~ #fauxBody #mainMenu .nightAndDay label:before {
-	content:"Night Mode";
+  content: "Night Mode";
 }
 
-
-
 fieldset {
-	padding-bottom:1em;
+  padding-bottom: 1em;
 }
 
 fieldset input,
 button {
-	border:1px solid var(--input-border-color);
-	border-radius:0.25em;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.25em;
 }
 
 button {
-	padding:0.25em 1em;
-	background:var(--button-background);
-	color:var(--button-color);
+  padding: 0.25em 1em;
+  background: var(--button-background);
+  color: var(--button-color);
 }
 
 button:focus,
 button:hover {
-	background:var(--button-hover-background);
+  background: var(--button-hover-background);
 }
 
 fieldset input,
 fieldset textarea {
-	padding:0.25em 0.5em;
-	background:var(--input-background);
+  padding: 0.25em 0.5em;
+  background: var(--input-background);
 }
 
 fieldset > label input {
-	width:100%;
-	margin:0.25em 0 0.5em;
+  width: 100%;
+  margin: 0.25em 0 0.5em;
 }
 
 .submitsAndHiddens {
-	text-align:center;
+  text-align: center;
 }
 
-
 #fauxInner > footer ul {
-	list-style:none;
+  list-style: none;
 }
 
 #fauxInner > footer a {
-	text-decoration:none;
-	color:var(--footer-a-color);
+  text-decoration: none;
+  color: var(--footer-a-color);
 }
 
 #fauxInner > footer a:focus,
 #fauxInner > footer a:hover {
-	text-decoration:underline;
-	color:var(--footer-a-hover-color);
+  text-decoration: underline;
+  color: var(--footer-a-hover-color);
 }
 
-@media (max-width:38em) {
-	#fauxInner > footer {
-		display:block;
-	}
-	#fauxInner > footer section {
-		padding-bottom:1.5em;
-		text-align:center;
-	}
-	#fauxInner > footer section:last-child {
-		text-align:center;
-		padding-bottom:0;
-	}
+@media (max-width: 38em) {
+  #fauxInner > footer {
+    display: block;
+  }
+  #fauxInner > footer section {
+    padding-bottom: 1.5em;
+    text-align: center;
+  }
+  #fauxInner > footer section:last-child {
+    text-align: center;
+    padding-bottom: 0;
+  }
 }
 
 .modal .modalClose {
-  display:inline; /* undo hidden */
-  text-decoration:none;
+  display: inline; /* undo hidden */
+  text-decoration: none;
 }
 
 .modal,
 .modal > .modalClose,
 #fauxBody {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  overflow:auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .modal {
-  left:-100vw;
-  opacity:0;
-  padding:1em;
-  transition:opacity 0.1s, left 0s 0.1s;
-  background:radial-gradient(
-    var(--modal-radial-color-inner) 20%,
-    var(--modal-radial-color-outer) 100%
-  );
+  left: -100vw;
+  opacity: 0;
+  padding: 1em;
+  transition: opacity 0.1s, left 0s 0.1s;
+  background: radial-gradient(var(--modal-radial-color-inner) 20%, var(--modal-radial-color-outer) 100%);
 }
 
 .modal:target {
-  left:0;
-  opacity:1;
-  transition:opacity 0.1s, left 0s;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.1s, left 0s;
 }
 
 .modal > div {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }
 
 .modal > div > section,
 .modal > div > nav {
-  position:relative;
-  overflow:hidden;
-  width:100%;
-  max-width:24em;
-  background:var(--modal-section-background);
-  border:1px solid var(--modal-section-border-color);
-  border-radius:0.5em;
-  box-shadow:0 0.25em 1em var(--modal-section-box-shadow-color);
-  transform:scale(0);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 24em;
+  background: var(--modal-section-background);
+  border: 1px solid var(--modal-section-border-color);
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 1em var(--modal-section-box-shadow-color);
+  transform: scale(0);
 }
 
 .modal:target > div > section,
 .modal:target > div > nav {
-  transform:scale(1);
+  transform: scale(1);
 }
 
 section .modalClose,
 nav .modalClose {
-  position:absolute;
-  top:0;
-  right:0.325em;
-  font-size:1.75em;
-  color:var(--modal-close-color);
+  position: absolute;
+  top: 0;
+  right: 0.325em;
+  font-size: 1.75em;
+  color: var(--modal-close-color);
 }
 
 section .modalClose:after,
 nav .modalClose:after {
-  content:"\1F5D9";
+  content: "\1F5D9";
 }
 
 section .modalClose:focus,
 section .modalClose:hover,
 nav .modalClose:focus,
 nav .modalClose:hover {
-  transform:scale(1.2);
+  transform: scale(1.2);
 }
 
-
 .modal h2 {
-  padding:0.4em 2.8em 0.4em 0.8em;
-  font-size:1.25em;
-  background:var(--modal-h2-background);
-  border-bottom:1px solid var(--modal-h2-border-color);
+  padding: 0.4em 2.8em 0.4em 0.8em;
+  font-size: 1.25em;
+  background: var(--modal-h2-background);
+  border-bottom: 1px solid var(--modal-h2-border-color);
 }
 
 .modal h2 + div {
-  padding:1.5em 1.5em 0;
+  padding: 1.5em 1.5em 0;
 }
 
 .modal p,
 .modal ul,
 .modal ol,
 .modal .submitsAndHiddens {
-  padding-bottom:1.5em;
+  padding-bottom: 1.5em;
 }
 
-
 .modalMenu > div > nav {
-  width:auto;
+  width: auto;
 }
 
 .modalMenu > div > nav > div {
-  padding:0.25em;
+  padding: 0.25em;
 }
 
 .modalMenu ul {
-  list-style:none;
-  padding:0;
+  list-style: none;
+  padding: 0;
 }
 
 .modalMenu li {
-  display:block;
+  display: block;
 }
 
 .modalMenu ul a {
-  display:block;
-  padding:0.25em 1em;
-  margin-bottom:0.25em;
-  text-align:center;
-  text-decoration:none;
-  background:var(--modalMenu-a-background);
-  color:var(--modalMenu-a-color);
-  border:1px solid var(--modalMenu-a-border-color);
+  display: block;
+  padding: 0.25em 1em;
+  margin-bottom: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  background: var(--modalMenu-a-background);
+  color: var(--modalMenu-a-color);
+  border: 1px solid var(--modalMenu-a-border-color);
 }
 
 .modalMenu li:last-child a {
-  margin:0;
-  border-radius:0 0 0.25em 0.25em;
+  margin: 0;
+  border-radius: 0 0 0.25em 0.25em;
 }
 
 .modalMenu ul a:focus,
 .modalMenu ul a:hover {
-  background:var(--modalMenu-a-hover-background);
+  background: var(--modalMenu-a-hover-background);
 }
 
 #search > div > section {
-  max-width:32em;
+  max-width: 32em;
 }
 
 #search > div > section > div {
-  padding:1em 1em 0;
+  padding: 1em 1em 0;
 }
 
 /*
@@ -493,159 +514,153 @@ nav .modalClose:hover {
 */
 
 #search fieldset {
-	position:relative;
-	padding-right:2.5em;
+  position: relative;
+  padding-right: 2.5em;
 }
 
 #search fieldset input {
-	width:100%;
+  width: 100%;
 }
 
 #search button {
-	position:absolute;
-	right:-0.1em;
-	top:0.25em;
-  padding:0;
-  font-size:1.5em;
-  line-height:1em;
-  background:transparent;
-  border:none;
+  position: absolute;
+  right: -0.1em;
+  top: 0.25em;
+  padding: 0;
+  font-size: 1.5em;
+  line-height: 1em;
+  background: transparent;
+  border: none;
 }
 
-@media (max-width:40em) {
-
+@media (max-width: 40em) {
   .mainMenuOpen {
-    flex:0 0 auto;
-    display:block;
-    padding:0.25em;
-    text-decoration:none;
-    border-radius:0.5em;
+    flex: 0 0 auto;
+    display: block;
+    padding: 0.25em;
+    text-decoration: none;
+    border-radius: 0.5em;
   }
-  
+
   .mainMenuOpen:focus,
   .mainMenuOpen:hover {
-    transform:scale(1.2);
+    transform: scale(1.2);
   }
-  
+
   .mainMenuOpen:before,
   .mainMenuOpen:after {
-    content:"";
-    display:block;
-    width:1.75em;
-    height:0.975em;
-    border:solid var(--mainMenuOpen-color);
-    border-width:0.325em 0;
+    content: "";
+    display: block;
+    width: 1.75em;
+    height: 0.975em;
+    border: solid var(--mainMenuOpen-color);
+    border-width: 0.325em 0;
   }
-  
+
   .mainMenuOpen:after {
-		height:0.65em;
-    border-top:none;
+    height: 0.65em;
+    border-top: none;
   }
 
   #mainMenu .modalClose {
-    display:inline; /* undo hidden */
-    text-decoration:none;
+    display: inline; /* undo hidden */
+    text-decoration: none;
   }
-  
+
   #mainMenu,
   #mainMenu > .modalClose {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    overflow:auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
   }
 
   #mainMenu {
-    left:-100vw;
-    opacity:0;
-    padding:1em;
-    transition:opacity 0.3s, left 0s 0.3s;
-    background:radial-gradient(
-      var(--modal-radial-color-inner) 20%,
-      var(--modal-radial-color-outer) 100%
-    );
+    left: -100vw;
+    opacity: 0;
+    padding: 1em;
+    transition: opacity 0.3s, left 0s 0.3s;
+    background: radial-gradient(var(--modal-radial-color-inner) 20%, var(--modal-radial-color-outer) 100%);
   }
 
   #mainMenu:target {
-    left:0;
-    opacity:1;
-    transition:opacity 0.1s, left 0s;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.1s, left 0s;
   }
 
   #mainMenu div {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
   }
 
   #mainMenu nav {
-    position:relative;
-    overflow:hidden;
-    width:100%;
-    max-width:24em;
-    background:var(--modal-section-background);
-    border:1px solid var(--modal-section-border-color);
-    border-radius:0.5em;
-    box-shadow:0 0.25em 1em var(--modal-section-box-shadow-color);
-    transform:scale(0);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 24em;
+    background: var(--modal-section-background);
+    border: 1px solid var(--modal-section-border-color);
+    border-radius: 0.5em;
+    box-shadow: 0 0.25em 1em var(--modal-section-box-shadow-color);
+    transform: scale(0);
   }
 
   #mainMenu:target nav {
-    transform:scale(1);
+    transform: scale(1);
   }
 
   #mainMenu nav:before {
-    content:"Main Menu";
-    display:block;
-    padding:0.4em 2.8em 0.4em 0.8em;
-    font-size:1.25em;
-    background:var(--modal-h2-background);
-    border-bottom:1px solid var(--modal-h2-border-color);
+    content: "Main Menu";
+    display: block;
+    padding: 0.4em 2.8em 0.4em 0.8em;
+    font-size: 1.25em;
+    background: var(--modal-h2-background);
+    border-bottom: 1px solid var(--modal-h2-border-color);
   }
-  
+
   #mainMenu > div > nav {
-    flex:0 0 auto;
-    width:auto;
+    flex: 0 0 auto;
+    width: auto;
   }
 
   #mainMenu ul {
-    display:block; /* disable flex */
-    list-style:none;
-    padding:0.25em;
+    display: block; /* disable flex */
+    list-style: none;
+    padding: 0.25em;
   }
 
   #mainMenu li {
-    display:inline;
-    margin:0;
+    display: inline;
+    margin: 0;
   }
 
   #mainMenu ul a,
   #mainMenu ul label {
-    display:block;
-    padding:0.25em 1em;
-    margin-bottom:0.25em;
-    text-align:center;
-    text-decoration:none;
-    background:var(--modalMenu-a-background);
-    border:1px solid var(--modalMenu-a-border-color);
+    display: block;
+    padding: 0.25em 1em;
+    margin-bottom: 0.25em;
+    text-align: center;
+    text-decoration: none;
+    background: var(--modalMenu-a-background);
+    border: 1px solid var(--modalMenu-a-border-color);
   }
 
   #mainMenu li:last-child a,
   #mainMenu li:last-child label {
-    margin:0;
-    border-radius:0 0 0.25em 0.25em;
+    margin: 0;
+    border-radius: 0 0 0.25em 0.25em;
   }
 
   #mainMenu ul a:focus,
   #mainMenu ul a:hover,
   #mainMenu ul label:focus,
   #mainMenu ul label:hover {
-    transform:scale(1);
-    background:var(--mainMenu-a-hover-background);
+    transform: scale(1);
+    background: var(--mainMenu-a-hover-background);
   }
-
 } /* max-width:40em */
-
